@@ -1,20 +1,20 @@
+#include <stdlib.h>
 #include "lists.h"
 
 /**
- * list_len - Number .
- * @h: pointer to list to print
- * Return: Number of members
+ * list_len - returns the number of elements in a linked list
+ * @h: pointer to the list_t list
+ *
+ * Return: number of elements in h
  */
-
 size_t list_len(const list_t *h)
 {
-	size_t ret;
+	size_t n = 0;
 
-	ret = 0;
-	while (h != NULL)
+	while (h)
 	{
-		ret += 1;
+		n++;
 		h = h->next;
 	}
-	return (ret);
+	return (n);
 }
